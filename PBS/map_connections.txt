@@ -1,0 +1,34 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Cedolan City (7) - Route 6 (44)
+7,West,0,44,East,15
+# Battle Frontier (52) - Cedolan City (7)
+52,North,0,7,South,131
+# Lerucean Town (23) - Route 3 (31)
+23,North,0,31,South,32
+# Route 7 (47) - Lerucean Town (23)
+47,North,0,23,South,1
+# Route 3 (31) - Ingido Plateau outside (35)
+31,West,0,35,East,10
+# Ingido Plateau outside (35) - Route 4 (39)
+35,West,11,39,East,0
+# Route 5 (41) - Route 4 Cycling Road (40)
+41,North,0,40,South,0
+# Route 5 (41) - Route 6 Cycling Road (45)
+41,South,6,45,North,0
+# Route 1 (5) - Pallet Town (2)
+5,South,6,2,North,0
+# Safari Zone outside (66) - Pallet Town (2)
+66,East,0,2,West,0
+# Route 8 (69) - Pallet Town (2)
+69,North,12,2,South,0
+# Safari Zone outside (66) - Route 1 (5)
+66,North,16,5,South,0
+# Viridian City (76) - Route 1 (5)
+76,South,5,5,North,0
+# Route 2 (84) - Viridian City (76)
+84,South,0,76,North,13
+# Pewter City (87) - Route 2 (84)
+87,South,6,84,North,0
+# Pallet Town (2) - Route 2 (21)
+2,142,0,21,0,95

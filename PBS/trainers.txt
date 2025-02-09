@@ -1,0 +1,296 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[TEAMROCKET_M,Grunt,1]
+LoseText = You're too good for me!
+Pokemon = WEEPINBELL,21
+    Shadow = yes
+#-------------------------------
+[TEAMROCKET_F,Grunt,1]
+LoseText = You're too good for me!
+Pokemon = BURMY,19
+Pokemon = WINGULL,19
+Pokemon = ELECTABUZZ,20
+    Shadow = yes
+#-------------------------------
+[YOUNGSTER,Ben]
+LoseText = Aww, I lost.
+Pokemon = RATTATA,11
+Pokemon = EKANS,11
+#-------------------------------
+[CAMPER,Jeff]
+LoseText = A very good battle, indeed!
+Pokemon = SPEAROW,16
+Pokemon = SENTRET,16
+#-------------------------------
+[CAMPER,Jeff,1]
+LoseText = You beat me again!
+Pokemon = FEAROW,29
+Pokemon = FURRET,29
+#-------------------------------
+[PICNICKER,Susie]
+LoseText = Defeated! Oh my!
+Pokemon = MEOWTH,18
+#-------------------------------
+[PICNICKER,Susie,1]
+LoseText = Defeated! Oh my!
+Pokemon = PERSIAN,32
+#-------------------------------
+[HIKER,Ford]
+LoseText = You're too good for me!
+Pokemon = MACHOP,19
+#-------------------------------
+[FISHERMAN,Andrew]
+LoseText = Washed out!
+Pokemon = MAGIKARP,14
+Pokemon = MAGIKARP,18
+#-------------------------------
+[BEAUTY,Bridget]
+LoseText = My Skitty!
+Pokemon = SKITTY,18
+#-------------------------------
+[LASS,Crissy]
+LoseText = You didn't have to win so convincingly!
+Pokemon = PLUSLE,17
+Pokemon = MINUN,17
+#-------------------------------
+[COOLCOUPLE,Alice & Bob]
+LoseText = Our teamwork failed!
+Pokemon = TURTWIG,19
+Pokemon = CHIMCHAR,19
+#-------------------------------
+[POKEMONTRAINER_May,May]
+LoseText = ...
+Pokemon = COMBUSKEN,19
+#-------------------------------
+[SWIMMER2_F,Ariel]
+LoseText = Washed out!
+Pokemon = STARYU,15
+Pokemon = GOLDEEN,11
+#-------------------------------
+[RIVAL1,Blue]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = BULBASAUR,18
+#-------------------------------
+[RIVAL1,Blue,1]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = CHARMANDER,18
+#-------------------------------
+[RIVAL1,Blue,2]
+LoseText = Not too shabby.
+Pokemon = PIDGEOTTO,17
+Pokemon = RATTATA,15
+Pokemon = SQUIRTLE,18
+#-------------------------------
+[CHAMPION,Blue]
+LoseText = A good battle indeed!
+Pokemon = VENUSAUR,63
+    Item = SITRUSBERRY
+Pokemon = CHARIZARD,63
+    Item = SITRUSBERRY
+Pokemon = BLASTOISE,63
+    Item = SITRUSBERRY
+#-------------------------------
+[PKMNTRAINER_Cynthia,Cynthia]
+LoseText = I see what Samuel sees in you.
+Pokemon = EEVEE,5
+    Shiny = yes
+    Item = SILKSCARF
+Pokemon = RIOLU,5
+    Item = FOCUSSASH
+Pokemon = GIBLE,5
+    Gender = female
+    Item = DRAGONFANG
+#-------------------------------
+[HGSSLASS,Tabitha]
+LoseText = You're really strong! You deserve her!
+Pokemon = GOLEM,50
+    Name = PAIN
+    Gender = male
+    Moves = MAGNITUDE,EARTHQUAKE,ROLLOUT,ROCKBLAST
+    Ball - MASTERBALL
+Pokemon = RAICHU,50
+    Name = LIGHTNING
+    Gender = male
+    Moves = THUNDER,SHOCKWAVE,DISCHARGE,DIG
+    Ball = ULTRABALL
+Pokemon = CROBAT,50
+    Name = Yas♀
+    Gender = female
+    Moves = ACROBATICS,POISONFANG,VENOSHOCK,SLUDGEBOMB
+    AbilityIndex = 0
+    IV = 28,12,28,12,28,20
+    Ball = HISUIANULTRABALL
+#-------------------------------
+[HEXMANIAC,Bailey]
+LoseText = I see. You're not afraid. Good.
+Pokemon = GASTLY,6
+    Item = SITRUSBERRY
+#-------------------------------
+[LEADER_Bailey,Bailey]
+Items = POTION,POTION
+LoseText = You've bested my ghost types. I'm impressed.
+Pokemon = GASTLY,8
+    Gender = female
+    Moves = HYPNOSIS,MEANLOOK,LICK,SHADOWBALL
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+    Ball = QUICKBALL
+Pokemon = PHANTUMP,10
+    IV = 20,20,20,20,20,20
+    Ball = QUICKBALL
+Pokemon = MIMIKYU,12
+    Shiny = yes
+    Name = Mimi
+    Ability = RATTLED
+    Item = SITRUSBERRY
+    IV = 20,20,20,20,20,20
+    Ball = DUSKBALL
+#-------------------------------
+[CHANELLER,Clara]
+LoseText = I'm surprised.
+Pokemon = LITWICK,7
+#-------------------------------
+[CHANELLER,Raven]
+LoseText = You're better than I expected.
+Pokemon = MISDREAVUS,8
+#-------------------------------
+[CHANELLER,Ivy]
+LoseText = ...I see.
+Pokemon = MISDREAVUS,8
+Pokemon = SHUPPET,9
+#-------------------------------
+[CHANELLER,Morticia]
+LoseText = Congratulations.
+Pokemon = ROTOM,8
+Pokemon = PHANTUMP,9
+#-------------------------------
+[COOLTRAINER_M,Steve]
+LoseText = You're almost as good as my sister!
+Pokemon = SENTRET,8
+Pokemon = SENTRET,9
+#-------------------------------
+[COOLTRAINER_F,Sandra]
+LoseText = Nice battling!
+Pokemon = SHINX,9
+Pokemon = MASCHIFF,9
+Pokemon = POOCHYENA,10
+#-------------------------------
+[LADY,Anna]
+LoseText = You've earned your spot to train here!
+Pokemon = CYNDAQUIL,10
+Pokemon = QUAXLY,10
+#-------------------------------
+[POKEMONTRAINER_Lyra,Lyra]
+LoseText = Good job!
+Pokemon = MARILL,10
+Pokemon = GIRAFARIG,10
+Pokemon = CHIKORITA,12
+#-------------------------------
+[PICNICKER,Taylor]
+LoseText = I was trying to rest!
+Pokemon = HOPPIP,10
+Pokemon = MAREEP,10
+#-------------------------------
+[BUGCATCHER,Josh]
+LoseText = My bug Pokemon!
+Pokemon = WURMPLE,6
+Pokemon = SPINARAK,6
+Pokemon = WEEDLE,6
+#-------------------------------
+[BUGCATCHER,Ricky]
+LoseText = I would have won if I had a Combee!
+Pokemon = CATERPIE,3
+#-------------------------------
+[BUGCATCHER,Joel]
+LoseText = Woah! You're strong!
+Pokemon = METAPOD,7
+Pokemon = KAKUNA,7
+Pokemon = SPINARAK,9
+#-------------------------------
+[BURGLAR,Ken]
+LoseText = Wait, you're not the cops!
+Pokemon = MEOWTH,7
+Pokemon = LITTEN,7
+#-------------------------------
+[OFFICER,Jenny]
+LoseText = Oh, I'm sorry! I thought you were a thief!
+Pokemon = GROWLITHE,7
+Pokemon = GROWLITHE,7
+#-------------------------------
+[COOLTRAINER_M,Harry]
+LoseText = I'm sorry sis!
+Pokemon = GEODUDE,7
+#-------------------------------
+[COOLTRAINER_F,Hannah]
+LoseText = You blew it, dude!
+Pokemon = SHUCKLE,8
+#-------------------------------
+[HIKER,Christopher]
+LoseText = Wow! I'm impressed!
+Pokemon = OMANYTE,7
+Pokemon = LARVITAR,8
+#-------------------------------
+[ROCKER,Michael]
+LoseText = Maybe I should go to Vermillion!
+Pokemon = GEODUDE,10
+	Form = 1
+#-------------------------------
+[PICNICKER,Sasha]
+LoseText = Waaaaaaah! You're mean!
+Pokemon = BONSLY,8
+Pokemon = BONSLY,8
+#-------------------------------
+[HIKER,Ronnie]
+LoseText = I wonder if you would have bested Brock!
+Pokemon = KABUTO,10
+#-------------------------------
+[CAMPER,Liam]
+LoseText = A very good battle, indeed!
+Pokemon = BONSLY,11
+#-------------------------------
+[CAMPER,Joseph]
+LoseText = Wow! You're strong!
+Pokemon = ROCKRUFF,11
+#-------------------------------
+[LEADER_Brock,Forrest]
+Items = SUPERPOTION,SUPERPOTION
+LoseText = You're almost as good as my big brother!
+Pokemon = GEODUDE,12
+    Moves = DEFENSECURL,ROCKTHROW,ROCKPOLISH,ROCKTOMB
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = ROCKRUFF, 13
+	Form = 2
+    Moves = SANDATTACK,ROCKTHROW,TACKLE,ROCKTOMB
+    IV = 20,20,20,20,20,20
+Pokemon = SUDOWOODO,14
+    Shiny = yes
+    Moves = FAKETEARS,ROCKTHROW,GRASSKNOT,ROCKTOMB
+    Ability = PROTEAN
+    Item = SITRUSBERRY
+    IV = 20,20,20,20,20,20
+    Ball = HEAVYBALL
+#-------------------------------
+[HIKER,Jerry]
+LoseText = I've failed you Brock!
+Pokemon = ONIX,15
+#-------------------------------
+[HIKER,Wes]
+LoseText = Wow! You're good!
+Pokemon = OMANYTE,15
+#-------------------------------
+[HIKER,Mike]
+LoseText = My fossil Pokemon!
+Pokemon = AERODACTYL,15
+#-------------------------------
+[HIKER,Joe]
+LoseText = Wow! You're strong!
+Pokemon = SUDOWOODO,15
+#-------------------------------
+[LEADER_Nixie,Nixie]
+LoseText = My Mom would be proud!
+Pokemon = STARYU,10

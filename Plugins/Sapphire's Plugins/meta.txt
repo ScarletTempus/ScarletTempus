@@ -1,0 +1,4 @@
+Name       = Sapphire's Plugins
+Version    = 1.0
+Essentials = 21.1
+Credits    = wrigty12, C.Ezra.M, Sapphirechuu

@@ -1,0 +1,335 @@
+Name         = Charms Case
+Version      = 1.1
+Essentials   = 20, 20.1, 21, 21.1
+Optional	 = Lin's BP System
+Website      = https://reliccastle.com/resources/1390/
+Credits      = Dr.Doom76, Wrigty12, TechSkylander1518, LinKazamine
+#===============================================================================
+# Installation
+#===============================================================================
+# To install this plugin, extract the folders file into your game root folder.
+# 
+#===============================================================================
+# How to use
+#===============================================================================
+# Because of how this is set up to work, two different arrays store Charm Data. One is for normal charms, the other
+# is for Elemental Charms.
+#
+# Adding normal charms can be done through "pbGainCharm(charm)" where charm is the ID of the charm (:EXPCHARM) for example.
+# This will store the charm data into an array, and not add it to the bag, 
+# so you don't have to worry about cluttering the key item bag with charms.
+# The script is set to give the Charm Case on receipt of the first charm.
+# After opening the Charm Case, the Charms can be toggled on and off. Useful if you want to turn off features.
+#
+# Added Elemental Charms. These Charms will mimic the favored type like how Flashfire increases 
+# encounter chance of fire Pokemon.
+# There's an Elemental Charm for every Element. By default, it will increase encounter chance to 40%, while the Charm is active.
+# Because of the way the Elemental Charms work, only one can be active at a time. When activating 
+# one, it will deactivate all other
+# Elemental Charms. This will ensure that only one Type will be hunted at a time.
+# To add Element Charms into the Elemental Charm array, you need to use "pbGainElementCharm(charm)" where charm is the ID of the 
+# Elemental Charm.(I.E. :FIRECHARM, :WATERCHARM, Etc.)
+#
+# When using the GainCharm method to add charms, by default, it is set to true.
+# The GainElementCharm method by default is set to false.
+# TLDR: pbGainCharm(:CHARMNAME) for normal charms
+# TLDR: pbGainElementCharm(:CHARMNAME) for elemental charms
+#===============================================================================
+# How to add new Charms
+#===============================================================================
+# Just add a new charm into the Charmlist file in the same format:
+# :CHARMNAME => false,
+# This will set the active value to false and allow you to properly use it with the # pbGainCharm(charm) method.
+#
+#=====================================#
+# List of included charms and effects:#
+#=====================================#
+#================================#
+#=== Mini Game / Collectables ===#
+#================================#
+#8
+# Apricorn Charm - Doubles Ball gain and halves the time needed to craft Balls when converting from Apricorn.
+#
+# Berry Charm - Berry quantity gathered multiplied by 2.
+#
+# Coin Charm - Multiples Coin gain by 3 in Voltorb Flip and 3 in Slot Machines. 
+# *If paired with Slots Charm, multiples winnings by 5* 
+# Also changes Slot Machines Background to match current prize amounts.
+# I've added in a pbReceiveCoin(coin), where coin would be value added, along with this.
+# It's meant to be used similar to how the games are where there are "hidden" coins
+# around the game corner.
+# Suppose you could use other methods of doing it, but I tried to keep things similiar.
+#
+# Gold Charm - Drops money after each battle, similar to Payday.
+# Also drops a set amount after each Battle.
+#
+# Lure Charm - Replaces Suction Cup. Fish always bite. #Added an extra 2 shiny retries with the charm.
+#
+# Mining Charm - Each hit is worth 0.75 instead of 1. This roughly translates to about 10 more strikes with the hammer. 
+#
+# Slots Charm - Prevents Machine slipping and slows down speed to 75%.
+# Per suggestion, adjusted to match the Coin Charm in multipling Coin value by 3, solo.
+# Paired with Coin Charm, increases winning and changes Backgrounds accordingly.
+#
+# Triple Triad Charm - Adds an extra card reward from winning.
+#
+#=========================================#
+#===== Youtuber Substitute's Charms ======#
+#=========================================#
+# These Charms were thought up by Youtuber Substitute. They have varying effects. #11
+#
+# Balance Charm - Evenly divide encounter rates across species in a given map.
+#
+# Clover Charm - Replaces Compound Eyes lead. Wild Pokemon are more likely to have held items. 
+# (Currently stacks with Compound Eyes for higher chance)
+# Rates are:
+# Common: Clover: 60	Stacked: 75
+# Uncommon: Clover: 20	Stacked: 35
+# Rare: Clover: 5		Stacked: 15
+#
+# Heart Charm - Replaces Shadow Tag Lead. Pokemon flee less. Encounter rates are higher. Party Pokemon gain more
+# happiness per step.
+#
+# Key Charm - 30% chance to encounter Pokemon with Hidden Ability.
+#
+# Link Charm - Increases encounter rate of Captured / KO'ed Pokemon and decreases rate of Fled From Pokemon.
+# Increases chance of Shiny Pokemon per Chain Count. Starting at 30 Chain Count, adds a small chance of max IVs
+# (~1.5%) per roll. Useful for Shiny hunting.
+#
+# Mercy Charm - Replaces Quick Feet Lead. If one of your Pokemon is faint, reduce the risk of Encounter by 50%.
+#
+# Promo Charm - Replaces pressure lead. Wild Pokemon are found at the highest available level. 30% Chance.
+#
+# Smart Charm - 30% chance to encounter Pokemon with Egg or Tutor move.
+#
+# Spirit Charm - Replaces Synchronize Lead. Wild Pokemon match the Nature of your Lead Pokemon. 30%
+# Chance.
+#
+# Twin Charm - Double Hidden Item Quantity.
+#
+# Viral Charm - Increases the chance of Wild Pokemon having PokeRus virus. 10% Chance.
+# Default game setting if PokeRus enabled: 3 / 65536.
+#
+#=========================================#
+#============ Elemental Charms ===========#
+#=========================================#
+# These charms simply change the encounter rate of each type of Pokemon. 
+# Only one can be active at a time. Each Charm increases the type encounter rate by 40%.
+# Increases capture rate of the active type by by 2.5*.
+# When Elemental Charms are active, also have an increased chance of capturing that type.
+# Electric Charm
+# Fire Charm
+# Water Charm
+# Grass Charm
+# Normal Charm
+# Fight Charm
+# Fly Charm
+# Posion Charm
+# Ground Charm
+# Rock Charm
+# Bug Charm
+# Ghost Charm
+# Steel Charm
+# Psychic Charm
+# Ice Charm
+# Dragon Charm
+# Dark Charm
+# Fairy Charm
+#
+#=========================================#
+#============== Other Charms =============#
+#=========================================#
+# 19
+# Corrupt Charm - Turns all caught Pokemon into Shadow Pokemon and has a chance of turning owned Pokemon into Shadow Pokemon.
+#
+# Disable Charm - 30% chance to disable opposing Pokemon's last used move.
+#
+# Easy Charm - Decreases the level of wild and trainer's Pokemon. Can also remove 1 Pokemon from Trainer's party (setting).
+#
+# Effort Charm - Pokémon receive more EV from battle.
+#
+# EXP All Charm - Mimics EXP All, in Charm form. Allows all Pokemon in the party to gain EXP.
+#
+# Frugal Charm - Halves the price of everything in the Pokemon Marts.
+#
+# Gene Charm - Wild Pokémon can appear with one or more max IV.
+#
+# Hard Charm - Increases the level of wild and trainer Pokemon.
+#
+# Healing Charm - Doubles HP recovery from items. Heals non-fainted Pokemon for 1 HP / 35 Steps.
+#
+# IV Charm - Increases Wild Pokemon and Egg IVs by 5.
+#
+# Points Charm - Double BP gained from Battles. # Lin's BP System Required
+#
+# Purify Charm - Helps purify Shadow Pokemon faster.
+#
+# Resistor Charm - Reduces damage from Super Effective attacked by 25%.
+#
+# Roaming Charm - Increases encounter rate of Roaming Pokemon.
+#
+# Safari Charm - Increases Steps, Balls, and Capture rate by 50%. Also decreases flee rate. - In Safari Zone.
+#
+# STAB Charm - Increases Same Type Attack Bonus damage bonus by 25%. (This bonus is, for instance, a Water Type using Water Gun)
+#
+# Step Charm - Reduces the amount of steps needed to hatch an egg.
+#
+# Trading Charm - Pokemon received from in game trades gain +10 to every stat IV and have a 20% chance of being Shiny.
+#
+# Wishing Charm - Every 24 gives either a Pokemon or item. Several toggle settings. 
+#  The toggles will allow you to switch from auto-generated non-starter, non-legendary Pokemon or a defined 
+#  list. Also, a toggle to remove the possibility of giving items.
+#
+#================================#
+#===== Pre-existing Charms ======#
+#================================#
+# These are Charms that are pre-built into the game. They have to be included due to the changes
+# in the way the Charms are handled. Since the Charms no longer go into the bag, the condition to 
+# activate had to be changed. #4
+#
+# Oval Charm - Increases the chance of finding an egg.
+# EXP Charm - Increase EXP gain by 50%.
+# Shiny Charm - Increase the chance of encountering Shiny Pokemon.
+# Catching Charm - Increase the chance of a critical catch.
+
+#=========================================#
+#============== Future Plans =============#
+#=========================================#
+# Fix the way the Elemental Charms are displayed.
+# Add Mark system and Mark charm.
+# Display Icons of Elemental Charms
+#=========================================#
+#=========== Credits Explained ===========#
+#=========================================#
+# Dr.Doom76 - For the Charm Case script. All the rest of the coding and images.
+#
+# Wrigty12 - Made most of the Icons for the Substitute's Charms. Also had the idea for the 
+# Charm Case and helped push me in the right direction in creating this plugin
+# and help with some of the code, and the code of most of the other Substitute's
+# charms.
+#
+# TechSkylander1518 - His Tech's Oddities post at Relic Castle bringing a lot  
+# of the charms to life and the code for the Berry and Slots Charm.
+#
+# LinKazamine - Redid a few charms sprites and coded some charms included in the Charm Case plugin. Coded and did icons for
+# Gene Charm, Effort Charm, Step Charm, Purify Charm, Corrupt Charm, Easy Charm, and Hard Charm. Also helped me greatly with 
+# Sprite advice.
+#=========================================#
+#============ Update History = ===========#
+#=========================================#
+# V1.1 - Added Link Charm - A charm which increases and decreases probability of encounters.
+# Link Charm - For Captured / KO'ed Pokemon, it will increase encounter chance by 10 * the Chain Count. Stores 1 Species.
+# Link Charm - For Fled From Pokemon, it will decrease encounter chance by 10 * the Fled Chain Count. Can store the rest of the Species.
+# Constantly Chaining will eventually reduce the chances to 100% chance of 1 Species(Capture/KOed), and 0% for the rest(Fled).
+# At Chain Count 30, it will add a small chance that encountered Pokemon will have perfect IVs. This is a togglable setting and a setting for the chance.
+# By Default, it's a 1000 / 65535 chance, starting at Chain Count 31(Approx ~1.5%). Every additional Count adds another "roll"(chance).
+# Chain Count will also increase Chance that a Pokemon will be Shiny. Every Chain Count will add an additional "roll"(chance).
+# 
+# Fixed issue where Gold Charm wasn't displaying proper gained value from Trainer Battles and dropped after battle wasn't working properly.
+# Added Contest Charm item image. Contest Charm was added in V1.09 with no image.
+# Contest Charm - Adds 50% more balls and 10% more score for captured Pokemon.
+# Fixed an issue with using pbGainCharm after adding the new max charm setting.
+# Added Kurt the Apricorn Ball guy into the script. Calling apricornToBall will activate the entire "Kurt Event" without the needs for a several page event.
+# Time needed for Ball to be ready is an adjustable setting. Default is 24 hours.
+# Added Apricorn Charm - Doubles Ball gain from Apricorn conversion and reduces Ball Ready time.
+# Added Points Charm - Doubles BP gain. # Requires Lin's BP System
+#
+# V1.09 - Added setting to limit Active Charms used. By default, set to false.
+# If true, can set the number of maximum Charms that can be active at once.
+# Added PBS items file for V21.1 users. Should be able to drag and drop and not have to mess with PBS.
+# ****The original 4 charms (Exp, Catching, Oval, and Shiny) have not been included into this file, to avoid duplication.
+# Restructured pbGiveAllCharms and pbGiveAllECharms
+# Added pbRemoveCharm(charm). You can now remove a Charm, if you wish. (Maybe make an event NPC for
+# players that don't want certain charms?) Use Ex: pbRemoveCharm(:MININGCHARM) Will remove Mining Charm.
+# Added pbDeactivateAll method that will deactive all active Charms. Useful if you want them going into a certain area
+# without the added bonuses of Charms.
+# Switched the Auto Generate for the Wishing Charm back to Egg Group. Not sure which plugin did it, but using
+# flags seemed to still allow certain Legendary and Mythical Pokemon through.
+# Going back to the Egg Group, I have added a "Blacklist" of Pokemon that are in the egg group, but not to take out.
+# I.E. Riolu, Baby Species, Nidorina, etc. This file is separate, in the Charm Effects file, and not to be messed with unless
+# you want to exclude Pokemon from the removal process. *I.E. you want them to be able to roll a Mewtwo, add Mewtwo to the list.
+# Fixed a spelling error allowing Ivysaur to be rolled for, when excluding starters.
+# A couple of the Graphics for the Charm Case have been updated for the inclusion of the display for the charm limiting.
+# As such, please overwrite the graphics when redownloading.
+# Added all unused Item Images.
+# Bug Contest Charm has been coded, but an image has not be created yet, so I don't want to say it's "Added" quite yet.
+#
+# V1.08 - Added Safari Charm - Increases Steps, Balls, and Catch Rate by 50%. Also decreases flee rate. - While in Safari Zone.
+# Added Roaming Charm - Roaming Pokemon are 25% more likely to be encountered.
+# Added Trading Charm - In game trades gain 10 IVs to all stats and have a 20% chance of being shiny.
+# Added Trip Triad Charm - Gains an extra reward from winning Mini-Game Triple Triad.
+# Frugal Charm now doubles sell prices, as well.
+# Fixed issue with pbPokemonMart issue displaying a include? issuefor V20.1.
+# Fixed issue with Easy Charm removing party members when not active.
+# Added Plugin compatibility with ZUD, fixing stack error while using STAB Charm.
+#
+# V1.07 - Added Lin's Easy and Hard Charms
+# Fixed and re-added Disable Charm. 
+# Added STAB Charm.
+# Further explained settings for Wishing Charm.
+# 
+# V1.06 - Added Lin's Corrupt and Purify Charms.
+# Moved the Blacklist section of the Wishing Charm into the settings file for ease of access.
+# Renamed some setting names for easier identifiability.
+# Added new settings to control the Wishing Charm a little easier.
+# New setting to turn on / off removing Legendary Pokemon from the Auto Pool.
+# New setting to use or don't use Blacklist at all.
+# Fixed an issue where the Approved List didn't reward Legendary properly.
+#
+#
+# V1.05 - Fixed an issue where the addition of Poke Mart broke pbItemBall.
+# Added Wishing Charm - a charm that will grant a wish every 24 hours. By default, it will give you a random non-starter, non-legendary Pokemon, or an item. 
+# You can change the Pokemon list to an approved list in the settings menu. The list itself is also modifiable through the settings menu. 
+# You can also turn off the inclusion of items through the settings menu, so it only gives Pokemon.
+# Wishing Charm will display like the "Elemental Charms" and "Close Case" text. It will only appear when player receives :WISHINGCHARM.
+# Added Frugal Charm - a charm that will reduce Pokemon Mart prices by half.
+# Updated PBS to include new Charms.
+# Changed the handling of Elemental Charms further. V1.04 still wasn't handling them properly.
+#
+# V1.04 - Added settings for almost every Charm value
+# Added Gene Charm, Disable Charm, Step Charm, Effort Charm.
+# Added new identification for charms, is_charm?
+# Added ability to purchase Charms and Elemental Charms from regular Poke Mart call (pbPokemonMart(stock))
+# 	Calling from the normal call will send it to the proper section of the Charm Case, instead of your inventory.
+# Added capture chance to elemental charms.
+# Added new charms to pbs and give all charm command.
+# Balance Charm and Elemental Charms were messing with each other:
+#		Made Balance Charm and Elemental Charms activation turn the other off.
+# 
+# V1.03 - Adjusted some code, making it easier to follow.
+# Fixed Slot Machine background problem. Images are back into one folder, following
+# 	the path of V21.1 (Graphics/UI)
+# Per suggestion, changed Slots Charm giving payout bonus as well.
+# Graphics adjusted accordingly.
+# Redid PBS txt and text throughout the script to make the charms in alphabetical order. More 
+# aesthetically pleasing and this is easier to sort, and deleted blanks lines which errors V21.1.
+# Adding missing Charms to PBS.
+# Added auto alphabetical sorting to the charm case.
+# Fixed a FloatDomainError error I ran into testing. *Issue with slider arrows*
+# Rebuilt the code to minimize overwriting of existing code, making it friendlier with other plugins.
+###Still have a little work to do, but should be much better.
+# Added EXP All Charm
+# Added all missing sprites, except elemental ones.
+# Added missing Charms into the initialization process.
+# 
+# V1.02 - Fixed several instances where V20.1 and V21.1 didn't line up, making it V21.1 capable. 
+# Replaced several charms with LinKazamine's sprites. 
+# Adjusted Healing Charm calculations.
+# Split Slot Machine Graphics into two locations - V20.1 and V21.1.
+# Added in pbGiveAllCharms and pbGiveAllECharms to give all Charms and all Elemental Charms.
+# 
+# V1.01 - Day One Patch. 
+# Fixed issue with improper value passing through methods that prevented itemBall from working.
+# Fixed issue with opening empty Charm Case. 
+# Adding missing charms to PBS. 
+# Fixed issue with IV Charm checking valid activation.
+# Fixed issue with WildEncounter difference between V20.1 and V21.1 causing an error on Wild Battle.
+# Changed Graphic location to match V21.1. 
+# New file included all slot machine images, so V20.1 can drop and go. 
+#
+# V1.0.0 - Inital Release
+
+# PlaceHolder TBD Charms:
+### Seeker Charm - Refreshs trainer battles.
+# Color Charm - Doubles chance to find a Pokemon with a different Hue. # Pokemon Color Variants required.
+# Crafting Charm - Reduces needed ingrediants and increases created item output. # Item Crafting UI Plus Required.
